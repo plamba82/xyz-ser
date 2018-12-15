@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+	<info organisation="akka_stream_ime"
+		module="akka_stream_ime_2.12"
+		revision="1.0"
+		status="integration"
+		publication="20181024225925"
+	>
+		<description>
+		akka_stream_ime
+		</description>
+	</info>
+	<configurations>
+		<conf name="compile" visibility="public" description=""/>
+		<conf name="runtime" visibility="public" description="" extends="compile"/>
+		<conf name="test" visibility="public" description="" extends="runtime"/>
+		<conf name="provided" visibility="public" description=""/>
+		<conf name="optional" visibility="public" description=""/>
+		<conf name="compile-internal" visibility="private" description="" extends="compile,optional,provided"/>
+		<conf name="runtime-internal" visibility="private" description="" extends="runtime,optional"/>
+		<conf name="test-internal" visibility="private" description="" extends="test,optional,provided"/>
+		<conf name="plugin" visibility="private" description=""/>
+		<conf name="pom" visibility="public" description=""/>
+		<conf name="scala-tool" visibility="private" description=""/>
+	</configurations>
+	<publications>
+		<artifact name="akka_stream_ime_2.12" type="pom" ext="pom" conf="pom"/>
+		<artifact name="akka_stream_ime_2.12" type="jar" ext="jar" conf="compile"/>
+		<artifact name="akka_stream_ime_2.12" type="src" ext="jar" conf="compile" e:classifier="sources"/>
+	</publications>
+	<dependencies>
+		<dependency org="org.scala-lang" name="scala-compiler" rev="2.12.4" conf="scala-tool->default,optional(default)"/>
+		<dependency org="org.scala-lang" name="scala-library" rev="2.12.4" conf="scala-tool->default,optional(default);compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-actor_2.12" rev="2.5.8" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.typesafe.akka" name="akka-stream_2.12" rev="2.5.8" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.typesafe.akka" name="akka-http_2.12" rev="10.0.11" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.typesafe.akka" name="akka-http-core_2.12" rev="10.0.11" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.typesafe.akka" name="akka-remote_2.12" rev="2.5.8" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.typesafe.akka" name="akka-contrib_2.12" rev="2.5.8" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.typesafe.akka" name="akka-cluster-tools_2.12" rev="2.5.8" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.typesafe.akka" name="akka-protobuf_2.12" rev="2.5.8" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.typesafe.akka" name="akka-cluster_2.12" rev="2.5.8" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.typesafe.akka" name="akka-cluster-sharding_2.12" rev="2.5.8" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.typesafe.akka" name="akka-distributed-data_2.12" rev="2.5.8" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.typesafe.akka" name="akka-persistence_2.12" rev="2.5.8" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.typesafe.akka" name="akka-slf4j_2.12" rev="2.5.8" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.typesafe.akka" name="akka-cluster-metrics_2.12" rev="2.5.8" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.fasterxml.jackson.core" name="jackson-core" rev="2.8.5" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.fasterxml.jackson.core" name="jackson-databind" rev="2.8.5" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.fasterxml.jackson.core" name="jackson-annotations" rev="2.8.5" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.cwbase" name="logback-redis-appender" rev="1.1.5" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.slf4j" name="slf4j-api" rev="1.7.25" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.logging.log4j" name="log4j-core" rev="2.10.0" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.logging.log4j" name="log4j-api" rev="2.10.0" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.logging.log4j" name="log4j-to-slf4j" rev="2.10.0" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="net.logstash.logback" name="logstash-logback-encoder" rev="4.11" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="ch.qos.logback" name="logback-core" rev="1.2.3" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="ch.qos.logback" name="logback-classic" rev="1.2.3" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.asynchttpclient" name="async-http-client" rev="2.0.38" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.elasticsearch" name="elasticsearch" rev="5.6.5" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.elasticsearch.client" name="transport" rev="5.6.5" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.google.code.gson" name="gson" rev="2.8.0" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.commons" name="commons-pool2" rev="2.4.2" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.axis" name="axis" rev="1.4" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="javax.xml" name="jaxrpc-api" rev="1.1" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="wsdl4j" name="wsdl4j" rev="1.6.2" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.deeplearning4j" name="deeplearning4j-core" rev="1.0.0-beta2" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.nd4j" name="nd4j-native-platform" rev="1.0.0-beta2" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.twelvemonkeys.imageio" name="imageio-core" rev="3.1.2" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="com.twelvemonkeys.common" name="common-lang" rev="3.1.2" conf="compile->default(compile)">
+			<exclude org="com.google.code.maven-play-plugin.org.allcolor.yahp" module="*" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+	</dependencies>
+</ivy-module>

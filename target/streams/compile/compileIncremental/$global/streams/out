@@ -1,0 +1,9 @@
+[0m[[0m[0mdebug[0m] [0m[0mFull compilation, no sources in previous analysis.[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll sources are invalidated.[0m
+[0m[[0m[0mdebug[0m] [0m[0mRecompiling all 9 sources: invalidated sources (9) exceeded 50.0% of all sources[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 9 Java sources to /Users/pinlamba/work/deeplearning/peronal/Neural-Demo-Akka server/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mAttempting to call com.sun.tools.javac.api.JavacTool@6d179993 directly...[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava compilation took 1.270059277 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava analysis took 0.323755932 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava compilation + analysis took 1.601355625 s[0m
+[0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
